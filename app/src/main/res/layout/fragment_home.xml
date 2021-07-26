@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <TextView
+        android:id="@+id/txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Xush kelibsiz!"
+        android:textColor="#2D3A45"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@id/txt2"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/txt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Xush kelibsiz!"
+        android:textColor="#2D3A45"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/txt3"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintLeft_toLeftOf="@id/txt1"
+        app:layout_constraintRight_toRightOf="@id/txt1"
+        app:layout_constraintTop_toBottomOf="@id/txt1"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <TextView
+        android:id="@+id/txt3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Telefon raqamingiz"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/til_phone"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintLeft_toLeftOf="@id/txt1"
+        app:layout_constraintRight_toRightOf="@id/txt1"
+        app:layout_constraintTop_toBottomOf="@id/txt2"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <LinearLayout
+        android:id="@+id/til_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10sp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/ly"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        app:layout_constraintBottom_toTopOf="@id/btn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt3">
+
+        <com.hbb20.CountryCodePicker
+            app:ccp_autoDetectCountry="true"
+            app:ccp_textSize="14dp"
+            android:id="@+id/ccp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:ccp_countryPreference="uz" />
+
+
+        <EditText
+            android:inputType="phone"
+            android:textSize="14sp"
+            android:id="@+id/et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:hint="phone number" />
+
+
+    </LinearLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:alpha="0.6"
+        android:id="@+id/btn"
+        android:layout_width="200dp"
+        android:layout_height="?actionBarSize"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="300dp"
+        android:background="@drawable/btn"
+        android:text="Kirish"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintLeft_toLeftOf="@id/til_phone"
+        app:layout_constraintRight_toRightOf="@id/til_phone"
+        app:layout_constraintTop_toBottomOf="@id/til_phone" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
